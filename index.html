@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto">User Registration System</a>
+            <a href="./login.html"><button class="btn btn-outline-success" type="submit">LOGIN</button></a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-6 justify-content-center">
+                <h2>Register Now</h2>
+
+                <!-- user name -->
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                </div>
+
+                <!-- email address -->
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+
+                <!-- password -->
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+
+                <!-- check me out -->
+                <!-- <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+
+                <!-- drop select opt -->
+                <div>
+                    <select name="" id="role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <!-- register button -->
+
+                <button type="submit" class="btn btn-primary mt-4" onclick="saveData()">Register</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBS9dZADCot94QmipfC4ecI4iFFMNUXExA",
+            authDomain: "authentication-with-database.firebaseapp.com",
+            databaseURL: "https://authentication-with-database-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "authentication-with-database",
+            storageBucket: "authentication-with-database.appspot.com",
+            messagingSenderId: "398413647490",
+            appId: "1:398413647490:web:902c3fb041aa184c46ee9b"
+        };
+
+        // Initialize Firebase
+        // const app = initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
